@@ -20,8 +20,26 @@ app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/music', function(req, res) {
-  return res.render('music', { artists: [{name: 'Above & Beyond'}] });
+  return res.render('music', { artists: getSongList() });
 });
+
+app.get('/music/song/:id', function(req, res) {
+  return res.render('music-player', { song: getSongDetails(req.params.id) });
+});
+
+function getSongList() {
+  return [
+    getSongDetails(0)
+  ];
+}
+
+function getSongDetails(id) {
+  return [{
+    artist: 'Above & Beyond',
+    title: 'Hello (Album Mix)',
+    url: '/songue.mp3'
+  }][id];
+}
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

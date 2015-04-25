@@ -3,4 +3,5 @@ extends layout
 block content
   h1 Music
   - for(var i=0;i<artists.length;i++)
-    li= artists[i].name
+    li
+      a(href='/music/song/'+i) #{artists[i].artist} - #{artists[i].title}
