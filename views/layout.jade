@@ -1,10 +1,8 @@
 doctype html
 html
   head
-    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
-    script(type='text/javascript', src='/js/nav-pointer.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
-
+    link(rel='stylesheet', href='/stylesheets/reset.css')
     // '?' hack to convince Firefox it's not "caching" the fact that it's decided
     // there's no favicon...because F*CKING STUPID IDIOTS AT MOZILLA WERE TOO BUSY
     // DROOLING ON THEIR KEYBOARDS TO MAKE FIREFOX SUPPORT FAVICONS IN A REMOTELY
@@ -13,11 +11,6 @@ html
     block head
   body
     .top-pane
-
-      //hr
-      //img.title(src='/images/netifly.svg')
-      span.title netifly
-      //hr
-      include includes/side-nav
-    .bottom-pane
+      span.title Netifly
+    .cd-main
       block content

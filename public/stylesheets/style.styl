@@ -1,130 +1,73 @@
 @import url('http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100')
 
-html, body
-  height: 100%
 
-body
-  display: flex
-  flex-direction: column
-  align-items: stretch
-
-  margin: 0
-  font-family: "Alegreya Sans SC", sans-serif, arial
+/* --------------------------------
 
 .top-pane
-  display: flex
-  flex-direction: row
-  align-items: stretch
-  justify-content: flex-start
 
-  color: white
-  //background-color: black
-  background-color: #108EC7
-  background: -webkit-linear-gradient(bottom, #000 0%,#4b4b4b 50%)
-  background: linear-gradient(to top,#000 0%,#4b4b4b 50%)
-  //background: -webkit-linear-gradient(bottom, #000 0%,#003282 50%)
-  //background: linear-gradient(to top,#000 0%,#003282 50%)
-  //background: -webkit-linear-gradient(bottom, #000 0%,#4b4b4b 50%)
-  //background: linear-gradient(to top, #000 0%,#4b4b4b 50%)
-
-.top-pane *
-  color: white
-
-.top-pane a
-  text-decoration: none
+-------------------------------- */
+.top-pane
+  height: 6rem
+  line-height: 6rem
+  text-align: center
+.top-pane h1
+  font-size: 2.2rem
 
 .top-pane span.title
   font-size: 6rem
   margin: 0
 
-.top-pane hr
-  height: 6rem
-  width: 1px
-  border: none
+/* --------------------------------
 
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%)
+.cd-item
 
-.bottom-pane
-  margin-left: 2rem
-  margin-top: 6rem
-  top: 6rem
-  display: -webkit-box
-  display: -moz-box
-  display: -ms-flexbox
-  display: -webkit-flex
-  display: flex
+-------------------------------- */
 
-  flex-direction: column
-  flex-grow: 1
-  -webkit-flex-flow: row wrap
-  justify-content: space-around
-  list-style: none
-  padding: 0
-  margin: 0
-
-.bottom-pane a
-  display: block
-  margin: 0
-
-.flex-item
-  background: tomato
-  padding: 5px
-  width: 200px
-  height: 150px
-  margin-top: 10px
-
-  line-height: 2rem
-  color: white
-  font-weight: bold
-  font-size: 2rem
-  text-align: center
-
-
-form
-  align-self: center
-  width: 40%
-  margin: 0
-
-form.solitary
-  margin: auto
-
-fieldset
-  display: flex
-  flex-direction: column
-  margin: 0
-
-ul.nav
-  display: inline
-  text-align: center
-  list-style: none
-  margin: 0
-  font-size: 4rem
-  height: 6rem
-
-ul.nav li
-  display: inline
-
-ul.nav li a
-  padding: 2rem 1rem
-
-ul.nav a
-  display: inline
+.cd-item
   width: 100%
-  height: 6rem
+  height: 10rem
+  text-align: center
+	display: table-cell
+	vertical-align: middle
+	background-color: #fff
 
-ul.nav a:hover
-  background-color: rgb(38.25, 38.25, 38.25)
-
-a.header
-  display: block
-  margin-left: auto
-  margin-right: auto
-  border: 0px
-  border-radius(2px)
-  width: 100%
+.cd-item a
+  display: table
   height: 100%
-  cursor: pointer
-  -webkit-appearance: button
-  cursor: pointer
-  font-family: inherit
-  color: #fff
+  width: 100%
+
+.cd-item:nth-of-type(2)
+  background-color: #000
+.cd-item:nth-of-type(3)
+  background-color: #4b4b4b
+
+.cd-item h2
+  font-size: 2.2rem
+
+.cd-item:nth-of-type(2) h2
+	opacity: 0.6
+	color: #fff
+
+.cd-item p
+  line-height: 1.2
+  font-size: 1.4rem
+  opacity: 0.6
+  padding: 1em 0
+.cd-item:nth-of-type(2n) p
+	color: #fff
+
+@media only screen and (min-width: 1100px)
+  .cd-item
+    width: 50%
+    float: left
+    height: 520px
+
+  .cd-item h2
+    font-size: 3rem
+	.cd-item:nth-of-type(2n) h2
+		color: white
+
+  .cd-item p
+    font-size: 1.6rem
+  .cd-item:nth-of-type(2n) p
+	  color: white
