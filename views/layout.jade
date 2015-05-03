@@ -1,15 +1,23 @@
 doctype html
 html
   head
-    title= title
+    script(type='text/javascript', src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script(type='text/javascript', src='/js/nav-pointer.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  top#telly
-    a.button(href='/telly')
-  top#films
-    a.button Films
-  top#mujaks
-    a.button Mujaks
-  top#searchbar
-    a.button SearchMe
+
+    // '?' hack to convince Firefox it's not "caching" the fact that it's decided
+    // there's no favicon...because F*CKING STUPID IDIOTS AT MOZILLA WERE TOO BUSY
+    // DROOLING ON THEIR KEYBOARDS TO MAKE FIREFOX SUPPORT FAVICONS IN A REMOTELY
+    // REASONABLE WAY when I'm done with this site I'm going into suicide bombing
+    link(rel='icon', type='image/png', href='/img/favicon.png?')
+    block head
   body
-    block content
+    .top-pane
+
+      //hr
+      //img.title(src='/images/netifly.svg')
+      span.title netifly
+      //hr
+      include includes/side-nav
+    .bottom-pane
+      block content

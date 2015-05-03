@@ -1,7 +1,6 @@
 extends layout
 
 block content
-  h1 Music
-  - for(var i=0;i<artists.length;i++)
-    li
-      a(href='/music/song/'+i) #{artists[i].artist} - #{artists[i].title}
+  - for(var i=0;i<200;i++)
+    li.flex-item
+      a(href='/music/song/'+0) #{artists[0].artist} - #{artists[0].title}
