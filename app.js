@@ -23,6 +23,10 @@ app.get('/music', function(req, res) {
   return res.render('music', { artists: getSongList() });
 });
 
+app.get('/home', function(req, res) {
+  return res.render('home', { artists: getSongList() });
+});
+
 app.get('/music/song/:id', function(req, res) {
   return res.render('music-player', { song: getSongDetails(req.params.id) });
 });
