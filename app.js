@@ -76,5 +76,4 @@ app.use(function(err, req, res, next) {
     });
 });
 
-
-require('http').createServer(app).listen(3000);
+require('http').createServer(app).listen(process.env['HTTP_PORT']);
