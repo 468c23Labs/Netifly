@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/reset.css')
     //link(rel='stylesheet', href='/stylesheets/mobile.css', media='only screen and (max-width:632px)')
     //link(rel='stylesheet', href='/stylesheets/stylesheet.css', media='screen and (min-width: 633px)')
     // '?' hack to convince Firefox it's not "caching" the fact that it's decided
@@ -11,9 +11,10 @@ html
     link(rel='icon', type='image/png', href='/img/favicon.png?')
     block head
   body
-    .top-pane
-
-      span.title Netifly
-      hr
-    .cd-main
-      block content
+    .wrapper
+      .header
+        span.title netifly
+        hr
+      .main
+        block content
+      .footer

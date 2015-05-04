@@ -1,9 +1,9 @@
 extends layout
 
 block content
-  ul.cd-gallery
+  .flex-container
     - for(var i=0;i<200;i++)
-      li.cd-item
+      li.flex-item
         a(href='/music/song/'+0)
-          h2 #{artists[0].artist}
-          p #{artists[0].title}
+          div.cd-artist= artists[0].artist
+          div.cd-title= artists[0].title

@@ -2,9 +2,6 @@
 li {
   list-style: none;
 }
-ul {
-  padding: 0;
-}
 body {
   font-family: "Alegreya Sans SC", sans-serif, arial;
   margin: 0;
@@ -13,7 +10,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 table {
   border-collapse: collapse;
@@ -52,66 +49,37 @@ margin: 0 {
   border: none;
   background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, #000 50%, rgba(0,0,0,0) 100%);
 }
-margin: 0 {
-  padding: 0;
-  border: 0;
-}
 /* --------------------------------
 
 .cd-*
 
 -------------------------------- */
 .cd-main {
+  padding: 0;
   margin-top: 100px;
+  list-style: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+align-content: flex-end {
+  background: #000;
 }
 .cd-item {
-  width: 100%;
-  height: 300px;
+  background: #000;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+}
+float: left {
+  line-height: 150px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.6rem;
   text-align: center;
-}
-display: table-cell {
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.cd-item a {
-  display: table;
-  height: 100%;
-  width: 100%;
-}
-text-decoration: none,
-.cd-item > h2 {
-  font-size: 2.2rem;
-}
-.cd-item > p {
-  line-height: 1.2;
-  font-size: 1.4rem;
-  opacity: 0.6;
-  padding: 1em 0;
-}
-@media only screen and (min-width: 600px) {
-  .cd-item {
-    width: 50%;
-    float: left;
-    height: 520px;
-  }
-  .cd-item > h2 {
-    font-size: 3rem;
-  }
-  .cd-item > p {
-    font-size: 1.6rem;
-  }
-  .cd-item:nth-of-type(4n+1) {
-    background-color: #000;
-  }
-}
-.cd-item:nth-of-type(4n+1) a {
-  color: #fff;
-}
-.cd-item:nth-of-type(4n) {
-  background-color: #000;
-}
-.cd-item:nth-of-type(4n) a {
-  color: #fff;
 }

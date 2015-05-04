@@ -1,0 +1,77 @@
+@import url('http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100')
+
+body
+  font-family: "Alegreya Sans SC", sans-serif, arial
+
+
+.wrapper
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  -webkit-flex-flow: column wrap
+  flex-flow: column wrap
+
+  text-align: center
+
+
+.header
+  background: white
+
+
+.header span.title
+  font-size: 6rem
+
+.header hr
+  height: 1px
+  width: 50rem
+  border: none
+  background-image: linear-gradient(to right, rgba(0,0,0,0) 0%, #000 50%, rgba(0,0,0,0) 100%)
+
+
+.main
+  text-align: left
+
+
+
+.flex-container
+  padding: 0
+  margin: 0
+  list-style: none
+
+  display: -webkit-box
+  display: -moz-box
+  display: -ms-flexbox
+  display: -webkit-flex
+  display: flex
+
+  flex-flow: row wrap
+  justify-content: space-around
+
+
+.flex-item
+  display: block
+
+  width: 12em
+  height: 12em
+
+  //color: white
+  font-weight: bold
+  font-size: 1em
+  text-align: center
+
+
+
+.flex-item a
+  display: block
+	height: 100%
+	width: 100%
+  text-decoration: none
+  color: #000
+
+.flex-item:nth-of-type(2n+1)
+  background: #000
+.flex-item:nth-of-type(2n+1) a
+  color: #fff
