@@ -76,4 +76,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
-require('http').createServer(app).listen(process.env['HTTP_PORT']);
+require('http').createServer(app).listen(process.env['HTTP_PORT'], function() {
+  if (process.env['STOP_ON_READY']) {
+    process.kill(process.pid, 'SIGSTOP');
+  }
+});
